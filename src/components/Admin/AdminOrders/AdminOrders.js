@@ -38,7 +38,7 @@ export default function AdminOrders() {
     const Admin = JSON.parse(localStorage.getItem("Admin"));
 
     useEffect(() => {
-        axios.get("http://ec2-54-250-170-185.ap-northeast-1.compute.amazonaws.com:5001/Admin/orders", {
+        axios.get("https://54.250.170.185.nip.io/Admin/orders", {
             headers: {
                 "x-access-token": Admin.accessToken
             }}).then(response => {
@@ -50,7 +50,7 @@ export default function AdminOrders() {
     }, [])
 
     const handleInvoice = (orderId) => {
-        axios.get(`http://ec2-54-250-170-185.ap-northeast-1.compute.amazonaws.com:5001/invoice/${orderId}`, {
+        axios.get(`https://54.250.170.185.nip.io/invoice/${orderId}`, {
             responseType: 'blob',
             headers: {
                 "x-access-token": Admin.accessToken

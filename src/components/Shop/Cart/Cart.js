@@ -112,7 +112,7 @@ export default function Cart() {
     const [ cart, setCart ] = useState();
 
     useEffect(() => {
-        axios.get("http://ec2-54-250-170-185.ap-northeast-1.compute.amazonaws.com:5001/cart", {
+        axios.get("https://54.250.170.185.nip.io/cart", {
             headers: {
                 "x-access-token": User.accessToken,
                 "userId": User.userId
@@ -133,7 +133,7 @@ const IncrementItem = ()=>{
 
 }
     const DeleteItemFromCart = (item) => {
-        axios.post("http://ec2-54-250-170-185.ap-northeast-1.compute.amazonaws.com:5001/deleteItemFromCart", {userId: User.userId, productId: item.productId}, {
+        axios.post("https://54.250.170.185.nip.io/deleteItemFromCart", {userId: User.userId, productId: item.productId}, {
             headers: {
                 "x-access-token": User.accessToken
             }}).then(response => {

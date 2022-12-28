@@ -39,7 +39,7 @@ export default function AdminSingleOrder(props) {
     var totalPrice = 0;
 
     useEffect(() => {
-        axios.get(`http://ec2-54-250-170-185.ap-northeast-1.compute.amazonaws.com:5001/Admin/order/${props.match.params.orderId}`, {
+        axios.get(`https://54.250.170.185.nip.io/Admin/order/${props.match.params.orderId}`, {
             headers: {
                 "x-access-token": Admin.accessToken
             }}).then(response => {

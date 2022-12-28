@@ -23,7 +23,7 @@ const UserNavbar = () => {
    const searchFromAPI = (val) => {
 
 
-    axios.get("http://ec2-54-250-170-185.ap-northeast-1.compute.amazonaws.com:5001/showProducts")
+    axios.get("https://54.250.170.185.nip.io/showProducts")
     .then(response => {
         console.log(response.data)
     
@@ -43,7 +43,7 @@ const UserNavbar = () => {
     const getDataFromAPI = (val) => {
         myOptions= []
         console.log("Options Fetched from API")
-        axios.get("http://ec2-54-250-170-185.ap-northeast-1.compute.amazonaws.com:5001/showProducts")
+        axios.get("https://54.250.170.185.nip.io/showProducts")
         .then(response => {
             console.log(response.data)
             for (var i = 0; i < response.data.length; i++) {

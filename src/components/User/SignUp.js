@@ -128,7 +128,7 @@ export default function SignUp(props) {
                 firebase.auth().currentUser.sendEmailVerification()
                     .then(() => {
                         alert("Email has been sent to provided email. Please verify before signing in");
-                        axios.post("http://ec2-54-250-170-185.ap-northeast-1.compute.amazonaws.com:5001/SignUp",data,{
+                        axios.post("https://54.250.170.185.nip.io/SignUp",data,{
                             headers: {
                             "Content-Type": "application/json",
                             },

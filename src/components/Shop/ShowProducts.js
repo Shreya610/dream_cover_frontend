@@ -18,7 +18,7 @@ export default function ShowProducts() {
     const [ products, setProducts ] = useState([]);
 
     useEffect(() => {
-        axios.get("http://ec2-54-250-170-185.ap-northeast-1.compute.amazonaws.com:5001/showProducts")
+        axios.get("https://54.250.170.185.nip.io/showProducts")
             .then(response => {
                 console.log(response.data)
                 setProducts(response.data)

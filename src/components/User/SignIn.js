@@ -127,7 +127,7 @@ export default function SignIn() {
                 }
 
                 if(user.user.emailVerified) {
-                    axios.post("http://ec2-54-250-170-185.ap-northeast-1.compute.amazonaws.com:5001/SignIn", data,{
+                    axios.post("https://54.250.170.185.nip.io/SignIn", data,{
                             headers: {
                                 "Content-Type": "application/json",
                             },

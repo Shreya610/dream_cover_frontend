@@ -25,7 +25,7 @@ export default function SingleProduct(props) {
     const User = JSON.parse(localStorage.getItem("User"));
 
     useEffect(() => {
-        axios.get(`http://ec2-54-250-170-185.ap-northeast-1.compute.amazonaws.com:5001/product/${props.match.params.productId}`, {
+        axios.get(`https://54.250.170.185.nip.io/product/${props.match.params.productId}`, {
             headers: {
                 "x-access-token": User.accessToken
             }}).then(response => {
@@ -64,7 +64,7 @@ export default function SingleProduct(props) {
        const AddToCart = (e) => {
         setOpen(true);
        
-        axios.post(`http://ec2-54-250-170-185.ap-northeast-1.compute.amazonaws.com:5001/addToCart`, { userId: User.userId, product}, {
+        axios.post(`https://54.250.170.185.nip.io/addToCart`, { userId: User.userId, product}, {
             headers: {
                 "x-access-token": User.accessToken
             }}).then(response => {

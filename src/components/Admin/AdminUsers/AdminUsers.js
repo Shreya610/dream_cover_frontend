@@ -29,7 +29,7 @@ export default function AdminUsers() {
     const Admin = JSON.parse(localStorage.getItem("Admin"));
 
     useEffect(() => {
-        axios.get("http://ec2-54-250-170-185.ap-northeast-1.compute.amazonaws.com:5001/Admin/users", {
+        axios.get("https://54.250.170.185.nip.io/Admin/users", {
             headers: {
                 "x-access-token": Admin.accessToken
             }}).then(response => {

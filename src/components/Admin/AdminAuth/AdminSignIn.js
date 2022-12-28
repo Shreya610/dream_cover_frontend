@@ -117,7 +117,7 @@ export default function AdminSignIn() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        axios.post("http://ec2-54-250-170-185.ap-northeast-1.compute.amazonaws.com:5001/Admin", data,{
+        axios.post("https://54.250.170.185.nip.io/Admin", data,{
                 headers: {
                 "Content-Type": "application/json",
                 },

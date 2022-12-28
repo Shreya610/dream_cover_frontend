@@ -50,7 +50,7 @@ export default function AdminPanel() {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            axios.get("http://ec2-54-250-170-185.ap-northeast-1.compute.amazonaws.com:5001/Admin/counts", {
+            axios.get("https://54.250.170.185.nip.io/Admin/counts", {
                 headers: {
                     "x-access-token": Admin.accessToken
                 }}).then(response => {

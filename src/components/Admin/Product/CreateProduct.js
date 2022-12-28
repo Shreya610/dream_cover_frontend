@@ -19,7 +19,7 @@ export default function CreateProduct() {
 
         e.preventDefault();
 
-        axios.post("http://ec2-54-250-170-185.ap-northeast-1.compute.amazonaws.com:5001/createProduct", addProduct, {
+        axios.post("https://54.250.170.185.nip.io/createProduct", addProduct, {
             headers: {
                 "x-access-token": Admin.accessToken
             }}).then((res) => {

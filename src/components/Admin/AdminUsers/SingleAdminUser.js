@@ -41,7 +41,7 @@ export default function AdminSingleUser(props) {
     const [ orderData, setOrderData ] = useState();
 
     useEffect(() => {
-        axios.get(`http://ec2-54-250-170-185.ap-northeast-1.compute.amazonaws.com:5001/Admin/user/${props.match.params.userId}`, {
+        axios.get(`https://54.250.170.185.nip.io/Admin/user/${props.match.params.userId}`, {
             headers: {
                 "x-access-token": Admin.accessToken
             }}).then(response => {

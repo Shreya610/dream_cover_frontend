@@ -30,7 +30,7 @@ export default function SingleAdminProduct(props) {
     const Admin = JSON.parse(localStorage.getItem("Admin"));
 
     useEffect(() => {
-        axios.get(`http://ec2-54-250-170-185.ap-northeast-1.compute.amazonaws.com:5001/product/${props.match.params.productId}`, {
+        axios.get(`https://54.250.170.185.nip.io/product/${props.match.params.productId}`, {
             headers: {
                 "x-access-token": Admin.accessToken
             }}).then(response => {
@@ -42,7 +42,7 @@ export default function SingleAdminProduct(props) {
 
     const DeleteProduct = () => {
 
-        axios.delete(`http://ec2-54-250-170-185.ap-northeast-1.compute.amazonaws.com:5001/delete/${props.match.params.productId}`, {
+        axios.delete(`https://54.250.170.185.nip.io/delete/${props.match.params.productId}`, {
             headers: {
                 "x-access-token": Admin.accessToken
             }}).then(response => {

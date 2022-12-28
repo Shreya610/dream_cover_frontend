@@ -81,7 +81,7 @@ export default function ShippingStepper() {
 
   const handleOpen = () => {
     
-    axios.post("http://ec2-54-250-170-185.ap-northeast-1.compute.amazonaws.com:5001/postorder", {shippingInfo, User}, {
+    axios.post("https://54.250.170.185.nip.io/postorder", {shippingInfo, User}, {
       headers: {
           "x-access-token": User.accessToken
       }}).then(response => {
