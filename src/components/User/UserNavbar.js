@@ -65,7 +65,7 @@ const UserNavbar = () => {
 
     return (
         <div className={classes.root}>
-            <Navbar bg="dark" variant="dark" expand="sm" sticky="bottom">
+            <Navbar bg="light" variant="dark" expand="sm" sticky="bottom">
                 <Container>
                     <Navbar.Brand href="#home"><img src="https://firebasestorage.googleapis.com/v0/b/dreamcover-28a23.appspot.com/o/logo-removebg-preview.png?alt=media&token=8ea173c5-cd86-4b94-98ed-8a3b618a128b" height={70} width={70} /></Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />

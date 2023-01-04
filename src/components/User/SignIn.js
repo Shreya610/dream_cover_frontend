@@ -10,7 +10,31 @@ import { useHistory } from 'react-router-dom';
 
 import UserLogin from '../../assets/UserLogin/UserLogin';
 import styled from 'styled-components';
-   
+import {
+  LoginSocialGoogle,
+  LoginSocialAmazon,
+  LoginSocialFacebook,
+  LoginSocialGithub,
+  LoginSocialInstagram,
+  LoginSocialLinkedin,
+  LoginSocialMicrosoft,
+  LoginSocialPinterest,
+  LoginSocialTwitter,
+  LoginSocialApple,
+  IResolveParams,
+} from 'reactjs-social-login';
+import {
+  FacebookLoginButton,
+  GoogleLoginButton,
+  GithubLoginButton,
+  AmazonLoginButton,
+  InstagramLoginButton,
+  LinkedInLoginButton,
+  MicrosoftLoginButton,
+  TwitterLoginButton,
+  AppleLoginButton,
+} from 'react-social-login-buttons';
+
 export const Box = styled.div`
   padding: 20px 20px;
   background: black;
@@ -189,9 +213,21 @@ export default function SignIn() {
                     <br />
                     <a href="/ForgetPassword">Forget Password?</a>
                     <a href="/SignUp" style={{ float: 'right' }}>Don't have an account? Sign Up</a>
+               
+               
+                    <br/><br/>
+             <div >
+          <FacebookLoginButton /></div>
+        <br/><br/>   <div>
+          <GoogleLoginButton /></div>
+    
+        
                 </Container>
-            </Grid>
+             </Grid>
         </Grid>
+ 
+          
+
         <Footer /></>
     )
 }
